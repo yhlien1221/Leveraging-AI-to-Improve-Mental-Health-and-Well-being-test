@@ -18,9 +18,10 @@ def load_model():
                 f.write(response.content)
 
     return AutoModelForCausalLM.from_pretrained(
-        model_path=MODEL_FILE,
+        MODEL_FILE,
         model_type="llama"
     )
+
 
 llm = load_model()
 
